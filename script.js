@@ -8,7 +8,9 @@ const livrosEncontrados = [
 
     { id: 4, titulo: "Duna", autor: "Frank Herbert", disponivel: true, capa: "https://m.media-amazon.com/images/I/81zN7udGRUL.jpg" },
 
-    { id: 5, titulo: "Sense Life - Volume 1", autor: "Caio Ulisses", disponivel: false, capa:"https://m.media-amazon.com/images/I/61gMtSihfZL._AC_UF1000,1000_QL80_.jpg"}
+    { id: 5, titulo: "Sense Life - Volume 1", autor: "Caio Ulisses", disponivel: true, capa:"https://m.media-amazon.com/images/I/61gMtSihfZL._AC_UF1000,1000_QL80_.jpg"},
+
+    { id: 6, titulo: "Jujutsu Kaisen - Volume 18", autor: "Gege Akutami", disponivel: true, capa:"https://m.media-amazon.com/images/I/81InOZKyKSL.jpg"}
 ];
 
 // 2. Seleção do container
@@ -62,7 +64,35 @@ function exibirLivros(livros) {
         // Adicionar o card ao container principal
         container.appendChild(card);
     });
-}
+}   
 
 // 4. Execução inicial
 exibirLivros(livrosEncontrados);
+// --- Nova função para criar a área de pesquisa via DOM ---
+function criarAreaPesquisa() {
+    const main = document.querySelector('main');
+
+    // 1. Criar o container da pesquisa
+    const pesquisaContainer = document.createElement('div');
+    pesquisaContainer.classList.add('pesquisa-container');
+
+    // 2. Criar o campo de input
+    const inputPesquisa = document.createElement('input');
+    inputPesquisa.setAttribute('type', 'text');
+    inputPesquisa.setAttribute('placeholder', 'Digite o nome do livro ou autor...');
+
+    // 3. Criar o botão de busca
+    const botaoBusca = document.createElement('button');
+    botaoBusca.textContent = "Buscar";
+    botaoBusca.classList.add('btn-busca'); // Classe extra para o CSS
+
+    // 4. Montar a estrutura
+    pesquisaContainer.appendChild(inputPesquisa);
+    pesquisaContainer.appendChild(botaoBusca);
+
+    // 5. Inserir no topo do <main> (antes de tudo que já existe lá)
+    main.prepend(pesquisaContainer);
+};
+
+// Chamar a função para ela construir a barra na tela
+criarAreaPesquisa();
