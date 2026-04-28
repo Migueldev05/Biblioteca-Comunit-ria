@@ -4,22 +4,22 @@ const livrosEncontrados = [
 
     { id: 2, titulo: "Kimetsu no Yaiba Demon Slayer - Volume 12", autor: "Koyoharu Gotouge", disponivel: true, capa: "https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_82db58063l7kf8j47r9i0k8r6v/-S897-FWEBP" },
 
-    { id: 3, titulo: "Dom Casmurro", autor: "Machado de Assis", disponivel: true, capa: "https://www.livrariapolobooks.com.br/image/cache/catalog/Dom-Casmurro-600x800.jpg" },
+    { id: 3, titulo: "Bleach - Volume 24", autor: "Tite Kudo", disponivel: true, capa: "https://m.media-amazon.com/images/I/91mvG0y1AqL.jpg" },
 
-    { id: 4, titulo: "Duna", autor: "Frank Herbert", disponivel: true, capa: "https://m.media-amazon.com/images/I/81zN7udGRUL.jpg" },
+    { id: 4, titulo: "Chainsaw Man - Volume 1", autor: "Tatsuki Fujimoto", disponivel: true, capa: "https://m.media-amazon.com/images/I/71wp0XTXsAL.jpg" },
 
     { id: 5, titulo: "Sense Life - Volume 1", autor: "Caio Ulisses", disponivel: true, capa:"https://m.media-amazon.com/images/I/61gMtSihfZL._AC_UF1000,1000_QL80_.jpg"},
 
     { id: 6, titulo: "Jujutsu Kaisen - Volume 18", autor: "Gege Akutami", disponivel: true, capa:"https://m.media-amazon.com/images/I/81InOZKyKSL.jpg"},
 
-    { id: 7, titulo: "Blue Lock - Volume 19", autor: "Muneyuki Kaneshiro", disponivel: false, capa: "https://m.media-amazon.com/images/I/81L+iw6PCDL._UF1000,1000_QL80_.jpg"},
+    { id: 7, titulo: "One Piece - Volume 104", autor: "Eiichiro Oda", disponivel: true, capa: "https://m.media-amazon.com/images/I/91g0ixjXgXL._UF1000,1000_QL80_.jpg"},
 
     { id: 8, titulo: "Haikyuu - Volume 1", autor: "Haruichi Farudate", disponivel: true, capa: "https://m.media-amazon.com/images/I/61AU5L7LvRL._AC_UF1000,1000_QL80_.jpg"}
 ];
 
 // 2. Seleção do container
 const container = document.getElementById('resultadosBusca');
-    
+
 // 3. Função para exibir os livros
 function exibirLivros(livros) {
     livros.forEach(livro => {
