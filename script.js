@@ -10,12 +10,16 @@ const livrosEncontrados = [
 
     { id: 5, titulo: "Sense Life - Volume 1", autor: "Caio Ulisses", disponivel: true, capa:"https://m.media-amazon.com/images/I/61gMtSihfZL._AC_UF1000,1000_QL80_.jpg"},
 
-    { id: 6, titulo: "Jujutsu Kaisen - Volume 18", autor: "Gege Akutami", disponivel: true, capa:"https://m.media-amazon.com/images/I/81InOZKyKSL.jpg"}
+    { id: 6, titulo: "Jujutsu Kaisen - Volume 18", autor: "Gege Akutami", disponivel: true, capa:"https://m.media-amazon.com/images/I/81InOZKyKSL.jpg"},
+
+    { id: 7, titulo: "Blue Lock - Volume 19", autor: "Muneyuki Kaneshiro", disponivel: false, capa: "https://m.media-amazon.com/images/I/81L+iw6PCDL._UF1000,1000_QL80_.jpg"},
+
+    { id: 8, titulo: "Haikyuu - Volume 1", autor: "Haruichi Farudate", disponivel: true, capa: "https://m.media-amazon.com/images/I/61AU5L7LvRL._AC_UF1000,1000_QL80_.jpg"}
 ];
 
 // 2. Seleção do container
 const container = document.getElementById('resultadosBusca');
-
+    
 // 3. Função para exibir os livros
 function exibirLivros(livros) {
     livros.forEach(livro => {
@@ -54,20 +58,20 @@ function exibirLivros(livros) {
             console.log(`Sucesso: O livro "${livro.titulo}" (ID: ${livro.id}) foi reservado.`);
         });
 
-        // Montagem do Card (AppendChild)
-        card.appendChild(imagem);
+        
+        card.appendChild(imagem); // Montagem do Card (AppendChild)
         card.appendChild(titulo);
         card.appendChild(autor);
         card.appendChild(status);
         card.appendChild(botao);
 
-        // Adicionar o card ao container principal
-        container.appendChild(card);
+        
+        container.appendChild(card);  // Adicionar o card ao container principal
     });
 }   
 
-// 4. Execução inicial
-exibirLivros(livrosEncontrados);
+exibirLivros(livrosEncontrados);  // 4. Execução inicial
+
 // --- Nova função para criar a área de pesquisa via DOM ---
 function criarAreaPesquisa() {
     const main = document.querySelector('main');
