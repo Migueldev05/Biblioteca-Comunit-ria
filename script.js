@@ -55,6 +55,9 @@ function exibirLivros(livros) {
         botao.addEventListener('click', () => {
             botao.textContent = "Reservado!";
             botao.disabled = true;
+            status.classList.remove("status-disponivel");
+            status.classList.add("status-indisponivel");
+            status.textContent = "Indisponível"
             console.log(`Sucesso: O livro "${livro.titulo}" (ID: ${livro.id}) foi reservado.`);
         });
 
