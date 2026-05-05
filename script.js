@@ -4,7 +4,7 @@ const livrosEncontrados = [
 
     { id: 2, titulo: "Kimetsu no Yaiba Demon Slayer - Volume 12", autor: "Koyoharu Gotouge", disponivel: true, capa: "https://d14d9vp3wdof84.cloudfront.net/image/589816272436/image_82db58063l7kf8j47r9i0k8r6v/-S897-FWEBP" },
 
-    { id: 3, titulo: "Bleach - Volume 24", autor: "Tite Kudo", disponivel: true, capa: "https://m.media-amazon.com/images/I/91mvG0y1AqL.jpg" },
+    { id: 3, titulo: "Bleach - Volume 24", autor: "Tite Kubo", disponivel: true, capa: "https://m.media-amazon.com/images/I/91mvG0y1AqL.jpg" },
 
     { id: 4, titulo: "Chainsaw Man - Volume 1", autor: "Tatsuki Fujimoto", disponivel: true, capa: "https://m.media-amazon.com/images/I/71wp0XTXsAL.jpg" },
 
@@ -22,6 +22,8 @@ const container = document.getElementById('resultadosBusca');
 
 // 3. Função para exibir os livros
 function exibirLivros(livros) {
+    container.innerHTML = "";
+
     livros.forEach(livro => {
         // Criar elementos
         const card = document.createElement('div');
@@ -55,6 +57,9 @@ function exibirLivros(livros) {
         botao.addEventListener('click', () => {
             botao.textContent = "Reservado!";
             botao.disabled = true;
+            status.classList.remove("status-disponivel");
+            status.classList.add("status-indisponivel");
+            status.textContent = "Indisponível"
             console.log(`Sucesso: O livro "${livro.titulo}" (ID: ${livro.id}) foi reservado.`);
         });
 
@@ -64,8 +69,6 @@ function exibirLivros(livros) {
         card.appendChild(autor);
         card.appendChild(status);
         card.appendChild(botao);
-
-        
         container.appendChild(card);  // Adicionar o card ao container principal
     });
 }   
@@ -96,6 +99,13 @@ function criarAreaPesquisa() {
 
     // 5. Inserir no topo do <main> (antes de tudo que já existe lá)
     main.prepend(pesquisaContainer);
+
+    botaoBusca.addEventListener("click", () => {
+        const pesquisa = inputPesquisa.value.toLowerCase();
+        console.log(pesquisa);
+        const resultados = livrosEncontrados.filter(livro => livro.titulo.toLowerCase().includes(pesquisa));
+        exibirLivros(resultados);
+    });
 };
 
 // Chamar a função para ela construir a barra na tela
