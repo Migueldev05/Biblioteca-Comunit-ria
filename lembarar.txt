@@ -1,0 +1,13 @@
+Array: lista ordenada de objetos separados por vírgula. Também é uma coleção
+
+Objeto(orientação de objetos): unidade fundamental que encapsula dados 
+
+Objeto JavaScript: objeto criado a partir de uma classe
+
+classe: um modelo. Usado para criar objetos
+
+forEach: uma função anonima
+
+metodo: encontrado dentro de uma função JavaScript, é uma coleção de dados composta por coleções de pares, chave-valor.
+
+variável: uma memória.
