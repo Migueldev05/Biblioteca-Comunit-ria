@@ -84,3 +84,9 @@ button:disabled {
     width: auto !important; /* Sobrescreve o width 100% dos botões gerais */
     padding: 10px 25px !important;
 }
+
+@media (min-width: 900px){
+    #resultadosBusca{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -6,7 +6,7 @@ const livrosEncontrados = [
 
     { id: 3, titulo: "Bleach - Volume 24", autor: "Tite Kubo", disponivel: true, capa: "https://m.media-amazon.com/images/I/91mvG0y1AqL.jpg" },
 
-    { id: 4, titulo: "Chainsaw Man - Volume 1", autor: "Tatsuki Fujimoto", disponivel: true, capa: "https://m.media-amazon.com/images/I/71wp0XTXsAL.jpg" },
+    { id: 4, titulo: "Chainsaw Man - Volume 1", autor: "Tatsuki Fujimoto", disponivel: true, capa: "https://m.media-amazon.com/images/I/81s8xJUzWGL._AC_UF1000,1000_QL80_.jpg" },
 
     { id: 5, titulo: "Sense Life - Volume 1", autor: "Caio Ulisses", disponivel: true, capa:"https://m.media-amazon.com/images/I/61gMtSihfZL._AC_UF1000,1000_QL80_.jpg"},
 
